@@ -1,0 +1,11 @@
+{
+  "name": "flow-verify",
+  "owner": { "name": "Brayan Obispo Torres" },
+  "plugins": [
+    {
+      "name": "flow-verify",
+      "source": "./",
+      "description": "Author and run natural-language browser-verification flows. Two subagents plus a format spec."
+    }
+  ]
+}
