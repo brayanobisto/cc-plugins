@@ -1,11 +1,13 @@
 {
-  "name": "flow-verify",
-  "owner": { "name": "Brayan Obispo Torres" },
+  "name": "brayan-plugins",
+  "owner": { "name": "Brayan Obispo Torres", "email": "brayanobisto.dev@gmail.com" },
+  "description": "My personal Claude Code plugins",
+  "metadata": { "pluginRoot": "./plugins" },
   "plugins": [
     {
       "name": "flow-verify",
-      "source": "./",
-      "description": "Author and run natural-language browser-verification flows. Two subagents plus a format spec."
+      "source": "flow-verify",
+      "description": "Author and run natural-language browser-verification flows. Slash commands plus a verifier subagent and a format spec."
     }
   ]
 }

@@ -1,17 +1,17 @@
-# flow-verify
+# brayan-plugins
 
-A TDD-like loop for browser verification. The test artifact is a natural-language
-markdown flow file — no glue code. Two subagents:
+My personal Claude Code plugin marketplace.
 
-- `/flow-write <feature>` — reads your project source and writes flow files (one
-  scenario per file: happy path + expected-error cases).
-- `/flow-verify <flow-file>` — runs one flow against the browser via `agent-browser`
-  and returns a verdict (PASS / FAIL / DRIFT) that cites real signals.
+## Install
 
-Flow files live in `flows/` of the project you are verifying, not in this plugin.
-See `FORMAT.md` for the flow format.
+```
+/plugin marketplace add brayanobisto/brayan-plugins
+/plugin install flow-verify@brayan-plugins
+```
 
-## Install (local)
+Update later with `/plugin marketplace update brayan-plugins`.
 
-Add this directory as a local plugin in Claude Code, then restart. Verify with
-`/help` — `flow-write` and `flow-verify` should appear.
+## Plugins
+
+- **[flow-verify](plugins/flow-verify/)** — author and run natural-language
+  browser-verification flows. Requires the `agent-browser` skill.

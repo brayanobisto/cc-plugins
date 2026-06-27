@@ -10,18 +10,18 @@ fix code and you do not edit the flow.
 ## Steps
 
 1. Read `FORMAT.md` from the flow-verify plugin to know the flow structure, then
-   read the flow file you were given. Parse: `url`, `## Contexto`, `## Pasos`,
-   `## Aserciones`.
-2. Read `## Contexto` first. It lists the preconditions the flow assumes. If a
+   read the flow file you were given. Parse: `url`, `## Context`, `## Steps`,
+   `## Assertions`.
+2. Read `## Context` first. It lists the preconditions the flow assumes. If a
    precondition is clearly unmet, the verdict is DRIFT (not a bug).
 3. Use the `agent-browser` skill to drive the browser in **headed** mode. Open the
    flow's `url`.
-4. Execute the `## Pasos` in order, referencing elements by their visible
+4. Execute the `## Steps` in order, referencing elements by their visible
    text/label as written. If a step cannot be executed (element not found), stop
    and return **DRIFT** — record which step and why.
 5. As you go, capture evidence: console messages, network requests, page
    text/DOM, the current URL, and screenshots at key moments.
-6. Evaluate each `## Aserción` against the concrete captured signal.
+6. Evaluate each `## Assertion` against the concrete captured signal.
 7. Close the browser when done.
 
 ## Verdict
