@@ -24,3 +24,15 @@ Part of the `cc-plugins` marketplace:
 ```
 
 Requires the `agent-browser` skill (used by the verifier; not bundled).
+
+## Try the full loop
+
+Point the writer at a feature of a project whose app is running, then verify:
+
+```
+/browser-flow:write login                      # proposes scenarios, asks, writes flows/login/*.md
+/browser-flow:run flows/login/login-valid.md   # runs one flow → verdict
+```
+
+Or do both at once with `/browser-flow:loop login`. A DRIFT on the first run is normal —
+the writer derives labels from source and never saw the live app.
