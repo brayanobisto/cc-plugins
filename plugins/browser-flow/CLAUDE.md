@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-`flow-verify` is a Claude Code **plugin** — ~7 markdown files, **zero application code**.
+`browser-flow` is a Claude Code **plugin** — ~7 markdown files, **zero application code**.
 There is nothing to build, test, lint, or run. The "runtime" is Claude Code itself
 plus the `agent-browser` skill. Changes here are edits to prompts and spec text.
 
@@ -17,17 +17,17 @@ screenshots) as the evidence for its verdict.
 
 One verifier subagent + one spec, wired through slash commands (the writer is a command, not a subagent):
 
-- `commands/flow-write.md` → **interactive, runs in the main thread** (`/flow-write <feature>`).
+- `commands/write.md` → **interactive, runs in the main thread** (`/browser-flow:write <feature>`).
   Reads project source, **proposes** a scenario set, **asks** the user to confirm/correct
   (especially labels it couldn't verify from source), then writes one file per confirmed
   scenario into `flows/<feature>/` of the *target* project. Code-only by instruction —
   it must not open a browser. It is NOT a subagent: subagents can't ask the user mid-run,
   and asking is the whole point of this step.
-- `commands/flow-verify.md` → dispatches the `flow-verifier` subagent (`/flow-verify <flow.md>`).
-- `commands/flow-check.md` → orchestrates the full loop in the main thread (`/flow-check <feature>`):
+- `commands/run.md` → dispatches the `verifier` subagent (`/browser-flow:run <flow.md>`).
+- `commands/loop.md` → orchestrates the full loop in the main thread (`/browser-flow:loop <feature>`):
   does the interactive authoring, then dispatches the verifier once per generated flow,
   sequentially.
-- `agents/flow-verifier.md` — **browser-only** subagent, drives `agent-browser` headed,
+- `agents/verifier.md` — **browser-only** subagent, drives `agent-browser` headed,
   returns a verdict and cites real evidence. Never edits code or the flow.
 - `FORMAT.md` — single source of truth for the flow format. **Both the writer command and
   the verifier subagent read it at runtime**, so format rules live in exactly one place.

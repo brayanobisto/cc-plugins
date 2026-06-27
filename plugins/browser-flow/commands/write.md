@@ -5,9 +5,9 @@ argument-hint: <feature description> [target-dir]
 
 Author flow files for: $ARGUMENTS — interactively, in THIS thread. Do not dispatch a
 subagent, and do not open a browser (this step is code-only; the browser opens only in
-`/flow-verify`).
+`/browser-flow:run`).
 
-1. Read `FORMAT.md` from the flow-verify plugin so you produce conformant files.
+1. Read `FORMAT.md` from the browser-flow plugin so you produce conformant files.
 2. Read the relevant project source to discover: every scenario, the exact visible
    strings/labels, the routes/URLs, the network endpoints, and the preconditions the
    feature assumes.

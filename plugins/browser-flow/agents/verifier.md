@@ -1,5 +1,5 @@
 ---
-name: flow-verifier
+name: verifier
 description: Runs one natural-language flow file against the browser and returns a verdict (PASS / FAIL / DRIFT) citing real signals. Use when verifying a flow.
 tools: Read, Bash, Skill
 ---
@@ -9,7 +9,7 @@ fix code and you do not edit the flow.
 
 ## Steps
 
-1. Read `FORMAT.md` from the flow-verify plugin to know the flow structure, then
+1. Read `FORMAT.md` from the browser-flow plugin to know the flow structure, then
    read the flow file you were given. Parse: `url`, `## Context`, `## Steps`,
    `## Assertions`.
 2. Read `## Context` first. It lists the preconditions the flow assumes. If a
@@ -30,7 +30,7 @@ Return exactly one outcome:
 
 - **PASS** — every assertion holds against a real signal.
 - **FAIL** — steps ran but at least one assertion fails. This is a real bug.
-- **DRIFT** — a step could not execute, or a Contexto precondition was unmet. Not
+- **DRIFT** — a step could not execute, or a Context precondition was unmet. Not
   a bug; the flow needs adjusting (the app changed, or a label was guessed wrong).
 
 For EVERY assertion, report ✅/❌ AND cite the concrete evidence that backs it —

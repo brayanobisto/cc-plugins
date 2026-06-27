@@ -1,0 +1,6 @@
+{
+  "name": "browser-flow",
+  "version": "0.1.0",
+  "description": "Author and run natural-language browser-verification flows. Slash commands plus a verifier subagent and a format spec.",
+  "author": { "name": "Brayan Obispo Torres" }
+}

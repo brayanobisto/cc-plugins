@@ -1,6 +1,0 @@
-{
-  "name": "flow-verify",
-  "version": "0.1.0",
-  "description": "Author and run natural-language browser-verification flows. Two subagents plus a format spec.",
-  "author": { "name": "Brayan Obispo Torres" }
-}

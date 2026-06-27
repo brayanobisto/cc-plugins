@@ -6,12 +6,12 @@ My personal Claude Code plugin marketplace.
 
 ```
 /plugin marketplace add brayanobisto/cc-plugins
-/plugin install flow-verify@cc-plugins
+/plugin install browser-flow@cc-plugins
 ```
 
 Update later with `/plugin marketplace update cc-plugins`.
 
 ## Plugins
 
-- **[flow-verify](plugins/flow-verify/)** — author and run natural-language
+- **[browser-flow](plugins/browser-flow/)** — author and run natural-language
   browser-verification flows. Requires the `agent-browser` skill.

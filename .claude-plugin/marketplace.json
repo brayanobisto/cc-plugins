@@ -4,8 +4,8 @@
   "description": "My personal Claude Code plugins",
   "plugins": [
     {
-      "name": "flow-verify",
-      "source": "./plugins/flow-verify",
+      "name": "browser-flow",
+      "source": "./plugins/browser-flow",
       "description": "Author and run natural-language browser-verification flows. Slash commands plus a verifier subagent and a format spec."
     }
   ]
