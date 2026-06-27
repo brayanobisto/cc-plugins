@@ -1,15 +1,15 @@
-# brayan-plugins
+# claude-code-plugins
 
 My personal Claude Code plugin marketplace.
 
 ## Install
 
 ```
-/plugin marketplace add brayanobisto/brayan-plugins
-/plugin install flow-verify@brayan-plugins
+/plugin marketplace add brayanobisto/claude-code-plugins
+/plugin install flow-verify@claude-code-plugins
 ```
 
-Update later with `/plugin marketplace update brayan-plugins`.
+Update later with `/plugin marketplace update claude-code-plugins`.
 
 ## Plugins
 

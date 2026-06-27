@@ -16,11 +16,11 @@ See `FORMAT.md` for the flow format.
 
 ## Install
 
-Part of the `brayan-plugins` marketplace:
+Part of the `claude-code-plugins` marketplace:
 
 ```
-/plugin marketplace add brayanobisto/brayan-plugins
-/plugin install flow-verify@brayan-plugins
+/plugin marketplace add brayanobisto/claude-code-plugins
+/plugin install flow-verify@claude-code-plugins
 ```
 
 Requires the `agent-browser` skill (used by the verifier; not bundled).

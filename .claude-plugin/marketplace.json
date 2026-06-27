@@ -1,5 +1,5 @@
 {
-  "name": "brayan-plugins",
+  "name": "claude-code-plugins",
   "owner": { "name": "Brayan Obispo Torres", "email": "brayanobisto.dev@gmail.com" },
   "description": "My personal Claude Code plugins",
   "metadata": { "pluginRoot": "./plugins" },
